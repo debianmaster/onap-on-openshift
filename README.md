@@ -61,3 +61,20 @@ cd ../oneclick/
 # Wait for 30 min .... yes !
 ```
 
+
+
+
+#### Work-in-progress for k8s
+```
+
+    kubectl create clusterrolebinding rule1 --clusterrole=cluster-admin --serviceaccount=onap:default
+    kubectl create clusterrolebinding rule1 --clusterrole=cluster-admin --serviceaccount=onap-vid:default
+    kubectl create clusterrolebinding rule2 --clusterrole=cluster-admin --serviceaccount=onap-sdnc:default
+    kubectl create clusterrolebinding rule3 --clusterrole=cluster-admin --serviceaccount=onap-robot:default
+    kubectl create clusterrolebinding rule4 --clusterrole=cluster-admin --serviceaccount=onap-portal:default
+    kubectl create clusterrolebinding rule5 --clusterrole=cluster-admin --serviceaccount=onap-policy:default
+    kubectl create clusterrolebinding rule6 --clusterrole=cluster-admin --serviceaccount=onap-mso:default
+    kubectl create clusterrolebinding rule7 --clusterrole=cluster-admin --serviceaccount=onap-message-router:default
+    kubectl create clusterrolebinding rule8 --clusterrole=cluster-admin --serviceaccount=onap-appc:default
+    kubectl create clusterrolebinding rule9 --clusterrole=cluster-admin --serviceaccount=onap-aai:default
+ ```
