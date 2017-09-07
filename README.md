@@ -2,7 +2,8 @@
 
 ```console
 setenforce 0   #hate to do this but....
-#login as cluster-admin
+# Login as cluster-admin
+# You need a machine with atleast 32+ GB of memory
 
 oc adm policy add-scc-to-user privileged -z default -n onap
 oc adm policy add-scc-to-user anyuid -z default -n onap
