@@ -1,8 +1,9 @@
 # ONAP on openshift
+> ONAP installation scripts require a shared volume (PV) for reading all the configuration files  and the install scripts are reading it from a hostPath volume. Due to this reason we require hostPath volumes to be enabled on the openshift namespace/cluster.   This required all the components of the application needed to be running on single machine and also selinux disabaled.    In future we can refactor scripts to utilize a PV that may be part of gluster volume but for now disable selinux and make the service account privileged.
 
 ```console
-setenforce 0   #hate to do this but....
-# Login as cluster-admin
+setenforce 0    #Had do this for enabling hostPath volumes
+# Login as cluster-admin     
 # You need a machine with atleast 32+ GB of memory
 
 oc adm policy add-scc-to-user privileged -z default -n onap
