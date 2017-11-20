@@ -13,7 +13,7 @@ setenforce 0    #Had do this for enabling hostPath volumes
 > Also some components are in need of cluster wide privileges so cluster-admin privileged is added.
 
 ```console
-for ns in onap-aai onap-appc onap-message-router onap-mso onap-policy onap-portal onap-robot onap-sdc onap-sdnconap-vid 
+for ns in onap-aai onap-appc onap-message-router onap-mso onap-policy onap-portal onap-robot onap-sdc onap-sdnc onap-sdnconap-vid 
 do
   oc adm policy add-scc-to-user privileged -z default -n $ns
   oc adm policy add-scc-to-user hostmount-anyuid -z default -n $ns
